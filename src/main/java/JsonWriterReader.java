@@ -59,7 +59,7 @@ public class JsonWriterReader {
 
         messages.addAll(rows);
 
-        object.put(null, messages);
+        object.put("message", messages);
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(object.toJSONString());
             writer.flush();
